@@ -81,7 +81,7 @@ EditTaskCommand  ..>  Command
 
 
 
-
+## Problema vs patron seleccionado:
 ## Patters for each problem:
 - Problem 1: Prototype
   - Prototype es un patrón de diseño creacional que nos permite copiar objetos existentes sin que el código dependa de sus clases.
@@ -92,7 +92,7 @@ EditTaskCommand  ..>  Command
 - Problem 3: Template (ninguno le pego)
   - Template Method es un patrón de diseño de comportamiento que define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobrescriban pasos del algoritmo sin cambiar su estructura.
 
-- Problem 4: Command (ninguno le pego y tenemos dudas)
+- Problem 4: Command
   - Command es un patrón de diseño de comportamiento que convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta transformación te permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una solicitud y soportar operaciones que no se pueden realizar. 
   
 - Problem 5: Decorator

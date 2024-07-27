@@ -5,14 +5,14 @@ public class Main {
         Observer mobile1 = new MobileDevice("Móvil 1");
         Observer mobile2 = new MobileDevice("Móvil 2");
         Observer tablet = new TabletDevice("Tablet");
-        Observer tablet3 = new TabletDevice("Tablet 3");
+        Observer tablet2 = new TabletDevice("Tablet 2");
 
         messageService.registerObserver(mobile1);
         messageService.registerObserver(mobile2);
         messageService.registerObserver(tablet);
-        messageService.registerObserver(tablet3);
+        messageService.registerObserver(tablet2);
 
-        messageService.receiveMessage("Hola, este mensaje es para probar tablet 3!");
+        messageService.receiveMessage("Hola, este mensaje es para probar Mensajes a dispositivos!");
 
         // Simular la eliminación de un observador
         messageService.removeObserver(mobile2);

@@ -81,7 +81,7 @@ EditTaskCommand  ..>  Command
 
 
 
-
+## Problema vs patron seleccionado:
 ## Patters for each problem:
 - Problem 1: Prototype
   - Prototype es un patrón de diseño creacional que nos permite copiar objetos existentes sin que el código dependa de sus clases.

@@ -137,6 +137,10 @@ class TabletDevice {
   + update(String) void
 }
 
+Main  ..>  MessageService : «create»
+Main  ..>  MobileDevice : «create»
+Main  ..>  TabletDevice : «create»
+MessageService "1" *--> "observers *" Observer 
 MessageService  ..>  Subject 
 MobileDevice  ..>  Observer 
 TabletDevice  ..>  Observer 

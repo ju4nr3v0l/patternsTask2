@@ -104,6 +104,45 @@ Explicación:
 
   > Esto quiere decir que un evento debe disparar una acción en tiempo real, este evento sería la recepción de un nuevo mensaje y la acción es la notificación a los diferentes dispositivos por lo cual debe existir un observador que a la recepción del mensaje dispare el envío de notificaciones, esta básicamente es la problemática que resuelve el patrón observador.
 
+```mermaid
+classDiagram
+direction BT
+class Main {
+  + Main() 
+  + main(String[]) void
+}
+class MessageService {
+  + MessageService() 
+  + registerObserver(Observer) void
+  + removeObserver(Observer) void
+  + receiveMessage(String) void
+  + notifyObservers(String) void
+}
+class MobileDevice {
+  + MobileDevice(String) 
+  + update(String) void
+}
+class Observer {
+<<Interface>>
+  + update(String) void
+}
+class Subject {
+<<Interface>>
+  + registerObserver(Observer) void
+  + notifyObservers(String) void
+  + removeObserver(Observer) void
+}
+class TabletDevice {
+  + TabletDevice(String) 
+  + update(String) void
+}
+
+MessageService  ..>  Subject 
+MobileDevice  ..>  Observer 
+TabletDevice  ..>  Observer 
+
+```
+
 - ### Problema 3: Template (ninguno le pego)
   - Template Method es un patrón de diseño de comportamiento que define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobrescriban pasos del algoritmo sin cambiar su estructura.
 
